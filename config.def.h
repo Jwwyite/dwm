@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -95,11 +95,11 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 
-	{ NULL, XF86XK_AudioMute,                  spawn,    SHCMD("pamixer -t") },
-	{ NULL, XF86XK_AudioRaiseVolume,           spawn,    SHCMD("pamixer --allow-boost -i 5") },
-	{ NULL, XF86XK_AudioLowerVolume,           spawn,    SHCMD("pamixer --allow-boost -d 5") },
-	{ NULL, XF86XK_MonBrightnessUp,            spawn,    SHCMD("light -A 15") },
-	{ NULL, XF86XK_MonBrightnessDown,          spawn,    SHCMD("light -U 15") },
+	{ 0, XF86XK_AudioMute,                  spawn,    SHCMD("pamixer -t") },
+	{ 0, XF86XK_AudioRaiseVolume,           spawn,    SHCMD("pamixer --allow-boost -i 5") },
+	{ 0, XF86XK_AudioLowerVolume,           spawn,    SHCMD("pamixer --allow-boost -d 5") },
+	{ 0, XF86XK_MonBrightnessUp,            spawn,    SHCMD("light -A 15") },
+	{ 0, XF86XK_MonBrightnessDown,          spawn,    SHCMD("light -U 15") },
 
 
 	TAGKEYS(                        XK_1,                      0)

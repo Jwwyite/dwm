@@ -10,8 +10,8 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Iosevka Term,Iosevka Nerd Font Mono:size=10" };
-static const char dmenufont[]       = "Iosevka Term,Iosevka Nerd Font Mono:size=10";
+static const char *fonts[]          = { "Hack Nerd Font Mono:size=10" };
+static const char dmenufont[]       = "Hack Nerd Font Mono:size=10";
 static const char col_gray1[]       = "#2e3440";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#d8dee9";
@@ -102,7 +102,7 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioLowerVolume,           spawn,    SHCMD("pamixer --allow-boost -d 5") },
 	{ 0, XF86XK_MonBrightnessUp,            spawn,    SHCMD("light -A 15") },
 	{ 0, XF86XK_MonBrightnessDown,          spawn,    SHCMD("light -U 15") },
-	{ 0, XK_Print,                          spawn,    SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
+	{ 0, XK_Print,                          spawn,    SHCMD("maim pic-full-$(date '+%d-%m-%Y-%H:%M:%S').png") },
 
 
 	TAGKEYS(                        XK_1,                      0)

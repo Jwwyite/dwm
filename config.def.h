@@ -97,12 +97,14 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 
-	{ 0, XF86XK_AudioMute,                  spawn,    SHCMD("pamixer -t") },
-	{ 0, XF86XK_AudioRaiseVolume,           spawn,    SHCMD("pamixer --allow-boost -i 5") },
-	{ 0, XF86XK_AudioLowerVolume,           spawn,    SHCMD("pamixer --allow-boost -d 5") },
-	{ 0, XF86XK_MonBrightnessUp,            spawn,    SHCMD("light -A 15") },
-	{ 0, XF86XK_MonBrightnessDown,          spawn,    SHCMD("light -U 15") },
-	{ 0, XK_Print,                          spawn,    SHCMD("maim pic-full-$(date '+%d-%m-%Y-%H:%M:%S').png") },
+	{ 0, XF86XK_AudioMute,                     spawn,    SHCMD("pamixer -t") },
+	{ 0, XF86XK_AudioRaiseVolume,              spawn,    SHCMD("pamixer --allow-boost -i 5") },
+	{ 0, XF86XK_AudioLowerVolume,              spawn,    SHCMD("pamixer --allow-boost -d 5") },
+	{ 0, XF86XK_MonBrightnessUp,               spawn,    SHCMD("light -A 15") },
+	{ 0, XF86XK_MonBrightnessDown,             spawn,    SHCMD("light -U 15") },
+	{ 0,                            XK_Print,  spawn,    SHCMD("maim pic-full-$(date '+%d-%m-%Y-%H:%M:%S').png") },
+	{ MODKEY,                       XK_v,      spawn,    SHCMD("st -e pulsemixer") },
+	{ MODKEY,                       XK_w,      spawn,    SHCMD("chromium") },
 
 
 	TAGKEYS(                        XK_1,                      0)
